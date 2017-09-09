@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PowerBox.iml" filepath="$PROJECT_DIR$/PowerBox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PowerBoxPi/PowerBoxPi.iml" filepath="$PROJECT_DIR$/PowerBoxPi/PowerBoxPi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PowerClient/PowerClient.iml" filepath="$PROJECT_DIR$/PowerClient/PowerClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PowerServer/PowerServer.iml" filepath="$PROJECT_DIR$/PowerServer/PowerServer.iml" />
+    </modules>
+  </component>
+</project>
