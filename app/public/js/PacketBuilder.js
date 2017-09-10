@@ -13,7 +13,7 @@ var writeLogin = function(s, us, pw) {
      
     };
     var writeReserver = function(s) {
-      s.write("2002");
+      s.write("2004");
       setTimeout(function(){
         s.write("000");
       }, 175);

@@ -18,18 +18,18 @@
     <form action="/register" method="post">
     <div class="input-field">
             <input value="<%=username%>" placeholder="Username" name="username" id="username1" type="text" class="validate <%=invalid%>"/>
-            <label for="username1" data-error="Username taken">Username</label>
+            <label for="username1" data-error="Username ist vergeben!">Username</label>
         
     </div><br>
           <div class="input-field">
-          <input id="password" type="password" name="password" class="validate" />
-          <label for="password">Password</label>
+          <input id="password" placeholder="Password" type="password" name="password" class="validate <%=invalid2%>" />
+          <label for="password" data-error="Passwörter stimmen nicht überein!">Password</label>
         </div><br>
               <div class="input-field">
-                    <input id="password" type="password" class="validate" />
-                    <label for="password">Password bestätigen</label>
+                    <input id="password2" placeholder="Passwort" type="password" name="password2" class="validate <%=invalid2%>" />
+                    <label for="password2">Password bestätigen</label>
                   </div><br>
-  <button class="btn waves-effect waves-light" type="submit">Registrieren</button>  <br><br> 
+  <button class="btn waves-effect indigo lighten-1" type="submit">Registrieren</button>  <br><br> 
   <form/>
   </div>
   </main>

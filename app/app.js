@@ -28,7 +28,7 @@ app.get("/", function(req, res) {
     res.render("home");
 });
 app.get("/register", function(req, res) {
-    res.render("register", {invalid: "", username:""});
+    res.render("register", {invalid: "", username:"",invalid2: ""});
 });
 app.get("/login", function(req, res) {
     res.render("login", {invalid: "", username:""});
@@ -87,7 +87,7 @@ app.post("/reserve", function(req, res) {
         s.on('data', (data) => {
             if(typeof data === "string" && gemacht){
                  var bb = new ByteBuffer.fromUTF8(data)
-                 var res1 = bb.readString()              
+                 var res1 = bb.readString();
                 if(res1 ==  "0"){
                     res.render("map", {reserved: "Schon reserviert!"});
                     gemacht = false;
@@ -122,6 +122,10 @@ app.post("/register", function(req, res) {
     if (req.body !== {}) {
         var us = req.body.username;
         var pw = req.body.password;
+        var pw1 = req.body.password1;
+        if(pw != pw1){
+            res.render("register", {invalid: "", username:us, invalid2: "invalid"});            
+        } else {
         s.on('data', (data) => {
             if(typeof data === "string" && gemacht){
                  var bb = new ByteBuffer.fromUTF8(data)
@@ -132,7 +136,7 @@ app.post("/register", function(req, res) {
                     res.render("map", {reserved: ""});
                     gemacht = false;
                   } else{
-                    res.render("register", {invalid: "invalid", username:us});
+                    res.render("register", {invalid: "invalid", username:us, invalid2: ""});
                     gemacht = false;
                   }
             } else {
@@ -144,15 +148,17 @@ app.post("/register", function(req, res) {
                     res.render("map", {reserved: ""});
                     gemacht = false;
                   } else{
-                    res.render("register", {invalid: "invalid", username:us});
+                    res.render("register", {invalid: "invalid", username:us,invalid2: ""});
                     gemacht = false;
                   }
             }
         }
          });
         PacketBuilder.writeSignUp(s,us,pw);            
-    
+        }
     }else{
+
     } 
 });
-app.listen(3000);
+
+app.listen(3000, '0.0.0.0');
