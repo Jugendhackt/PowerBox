@@ -1,0 +1,42 @@
+<html>
+        <head>
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <link type="text/css" rel="stylesheet" href="css/ggg.css"  media="screen,projection"/>
+        </head>
+    <body>
+    <main>
+        <style>
+    body{background: #eeeeee; font-family: verdana; color: #000000;}
+    h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px;}
+    #all{padding: 20px}</style>
+        <div id="all" align="center">
+         <font size="7">
+         <img src="neisBlack2comp.png" width="250,625" height="56,3"> <br>
+        </font>
+        <form action="/login" method="post">
+            <div class="input-field">
+            <input value="<%=username%>" placeholder="Username" name="username" id="username1" type="text" class="validate <%=invalid%>"/>
+            <label for="username1" data-error="Username or Password is wrong">Username</label>
+           </div><br>
+          <div class="input-field">
+          <input id="password" type="password" name="password" class="validate"/>
+          <label for="password">Password</label>
+        </div><br>
+      <button class="btn waves-effect waves-light" type="submit">Einloggen</button>  <br><br> 
+     </form>
+      </div>
+      </main>
+  <footer class="page-footer grey">
+  <div class="footer-copyright grey darken-1">
+        <div class="left container">
+        © PowerBox | 2017
+        </div>
+      </div>
+ </footer>
+    </body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    </html>
+    
